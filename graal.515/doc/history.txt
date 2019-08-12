@@ -1,8 +1,13 @@
 mx clean
 mx build
 mvn -q clean package
+
+# Simple execution
+mx native-image -H:ReflectionConfigurationFiles=/Users/a/dev/git/allan/graal-playground/graal.515/src/main/resources/main.json -jar /Users/a/dev/git/allan/graal-playground/graal.515/target/graal.515.jar
+
+# Debug --debug-attach
 mx native-image -H:ReflectionConfigurationFiles=/Users/a/dev/git/allan/graal-playground/graal.515/src/main/resources/main.json --debug-attach -jar /Users/a/dev/git/allan/graal-playground/graal.515/target/graal.515.jar
 
-mx native-image -H:ReflectionConfigurationFiles=/Users/a/dev/git/allan/graal-playground/graal.515/src/main/resources/main.json -jar /Users/a/dev/git/allan/graal-playground/graal.515/target/graal.515.jar
+# Allow incomplete classpath
 mx native-image -H:+AllowIncompleteClasspath -H:ReflectionConfigurationFiles=/Users/a/dev/git/allan/graal-playground/graal.515/src/main/resources/main.json -jar /Users/a/dev/git/allan/graal-playground/graal.515/target/graal.515.jar
 
