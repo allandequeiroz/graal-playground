@@ -1,0 +1,4 @@
+mx clean
+mx build
+mx native-image -H:ReflectionConfigurationFiles=/Users/a/dev/git/allan/playground/src/main/resources/main.json --debug-attach -jar /Users/a/dev/git/allan/playground/target/playground.jar
+
