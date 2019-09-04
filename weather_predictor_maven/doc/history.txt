@@ -1,0 +1,3 @@
+mvn clean package native-image:native-image
+
+--language:js --language:ruby --language:R  --initialize-at-build-time=com.oracle.truffle.r.engine.RFileTypeDetector --initialize-at-build-time=com.oracle.truffle.r.runtime.context.TruffleRLanguage --initialize-at-build-time=com.oracle.truffle.r.runtime.instrument.memprof.MemAllocProfilerInstrument --initialize-at-build-time=com.oracle.truffle.r.engine.TruffleRLanguageImpl
